@@ -2,13 +2,14 @@
 <!DOCTYPE html>
 <!-- Now start the html section that will hold all the code -->
 <html>
-  <!-- next come the head this is the meta-data. Shows the page's title -->
+  <!-- next come the head this is the meta-data. Shows the page's title, the scripts, and style sheets -->
   <head>
     <!-- Now comes the title section to show what you see at the top of your browser screen or tab -->
-    <title class="title-header"><h1>Mercedes' CheatSheet</h1></title>
+    <title class="title-header">Mercedes' CheatSheet</title>
+    <link href="styles.css" rel="stylesheet" />
   </head>
   <!-- next is where we put our navigation bar this will lead us to all of the different sections of the webpage making it easier to navigate. -->
-  <nav>
+  <nav class="nav-header">
     <!-- I chose to use and un-numbered list to list out my sections as 2 main headers with three options underneath all of them -->
     <ul>
       <!-- This is the first main heading HTML -->
@@ -17,26 +18,12 @@
 
       <!-- This is where the three articles that are in the html section -->
       <ul>
-        <li class="html-rules-nav">HTML Rules</li>
-        <!-- Insert Link to HTML Rules section -->
-        <li class="html-layout-nav">HTML Layout</li>
+        <li class="html-layout-nav"><a href="#layout">HTML Layout</a></li>
         <!-- Insert Link to HTML Layout section -->
-        <li class="html-commands-nav">HTML Commands</li>
+        <li class="html-common-elements-nav"><a href="#common">HTML Common Elements</a></li>
         <!-- Insert Link to HTML Commands section -->
-      </ul>
-
-      <!-- This is main heading number 2 CSS -->
-      <li class="CSS-CheatSheet">CSS CheatSheet</li>
-      <!-- Insert Link to CSS CheatSheet section -->
-
-      <!-- This is where the three articles that are in the css section go -->
-      <ul>
-        <li class="css-rules-nav">CSS Rules</li>
-        <!-- Insert Link to CSS Rules section -->
-        <li class="css-layout-nav">CSS Layout</li>
-        <!-- Insert Link to CSS Layout section -->
-        <li class="css-commands-nav">CSS Commands</li>
-        <!-- Insert Link to CSS Commands section -->
+        <li class="html-table-rules-nav"><a href="#table">HTML Table Layout</a></li>
+        <!-- Insert Link to HTML Rules section -->
       </ul>
     </ul>
   </nav>
@@ -50,286 +37,416 @@
     <main class="main">
       <!--This is section one, the HTML Section -->
       <section class="HTML-section">
-        <!--This is article one, of section one html rules -->
-        <article class="html-rules">
-          <!-- This is the text body to explain the rules section and how to use it -->
-          <p>
-            <!-- This is the Paragraph about important things to know about the rules section and how to use it. -->
-          </p>
-          <!-- This is a table showing a quick reference look at the rules and when to apply them and when to use a different rule instead -->
-          <table class="table-one-html-rules">
-            <caption>
-              <!-- Insert The caption for this table here -->
-            </caption>
-            <!-- This is what the table heading looks like this is the colomn headers that go across the top of the table to let you know what reach one is for. -->
-            <thead>
-              <th scope="col"></th>
-              <th scope="col"></th>
-            </thead>
-            <!-- This is where the table body starts so where you are going to put all the data at -->
-            <tbody>
-              <!-- Here is our data for this article -->
-              <tr></tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
-        <!-- Always make sure that you are closing all of your starting pathways so that you don't have any errors in the code. -->
-
-        <!-- This is article two of section 1 html layouts -->
-        <article class="html-layouts-article">
+        <!-- This is article one of section 1 html layouts -->
+        <article class="html-layouts-article" id="layout">
           <!-- This is the text body that explains the important things to know about the layout section and how to use it -->
           <p>
             <!-- This is the Paragraph about important things to know about the layout section and how to use it. -->
           </p>
 
           <!-- This is the table that shows the best order in laying out a basic html coding block. This may become and image instead... Leave to be decided later -->
-          <table class="table-two-html-layout">
+          <table class="table-html">
             <caption>
-              <!-- Insert The caption for this table here -->
+              <p>
+                This is the typical order of operations for using HTML to build
+                a website.
+              </p>
             </caption>
             <thead>
-              <th scope="col"></th>
-              <th scope="col"></th>
+              <th scope="col">Element</th>
+              <th scope="col">How to use this element</th>
             </thead>
             <tbody>
               <tr></tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
+              <th scope="row">DOCTYPE</th>
+              <td>
+                Represents the root (top-level element) of an HTML document, so
+                it is also referred to as the root element. All other elements
+                must be descendants of this element.
+              </td>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">HTML</th>
+                <td>
+                  Represents the root (top-level element) of an HTML document,
+                  so it is also referred to as the root element. All other
+                  elements must be descendants of this element.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Head(Header)</th>
+                <td>
+                  Contains machine-readable information (metadata) about the
+                  document, like its title, scripts, and style sheets.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Title</th>
+                <td>
+                  Defines the document's title that is shown in a browser's
+                  title bar or a page's tab. It only contains text; tags within
+                  the element are ignored.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Navigation(Nav)</th>
+                <td>
+                  Represents a section of a page whose purpose is to provide
+                  navigation links, either within the current document or to
+                  other documents. Common examples of navigation sections are
+                  menus, tables of contents, and indexes.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Body</th>
+                <td>
+                  Represents the content of an HTML document. There can only be
+                  one such element in a document.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Main</th>
+                <td>
+                  Represents the dominant content of the body of a document. The
+                  main content area consists of content that is directly related
+                  to or expands upon the central topic of a document, or the
+                  central functionality of an application.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Section</th>
+                <td>
+                  Represents a generic standalone section of a document, which
+                  doesn't have a more specific semantic element to represent it.
+                  Sections should always have a heading, with very few
+                  exceptions.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Article</th>
+                <td>
+                  Represents a self-contained composition in a document, page,
+                  application, or site, which is intended to be independently
+                  distributable or reusable (e.g., in syndication). Examples
+                  include a forum post, a magazine or newspaper article, a blog
+                  entry, a product card, a user-submitted comment, an
+                  interactive widget or gadget, or any other independent item of
+                  content.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Paragraph</th>
+                <td>
+                  Represents a paragraph. Paragraphs are usually represented in
+                  visual media as blocks of text separated from adjacent blocks
+                  by blank lines and/or first-line indentation, but HTML
+                  paragraphs can be any structural grouping of related content,
+                  such as images or form fields.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Table</th>
+                <td>
+                  Represents tabular data—that is, information presented in a
+                  two-dimensional table comprised of rows and columns of cells
+                  containing data.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Footer</th>
+                <td>
+                  Represents a footer for its nearest ancestor sectioning
+                  content or sectioning root element. A footer typically
+                  contains information about the author of the section,
+                  copyright data, or links to related documents.
+                </td>
               </tr>
             </tbody>
           </table>
         </article>
-
-        <!--This is the last article of the first section html commands -->
-        <article class="html-commands-section">
+        <br />
+        <!--This is the second article of the first section html commands -->
+        <article class="html-common-elements-section" id="common">
           <!-- This is the text block that describes what the important things to know about the command section and how to use it. -->
           <p>
             <!-- This is the Paragraph about important things to know about the commands section and how to use it. -->
           </p>
           <!-- This is a table that has an easy reference guide to all the commands you might use regularly in html coding -->
-          <table class="table-three-html-commands">
+          <table class="table-html">
             <caption>
-              <!-- Insert The caption for this table here -->
+              <p>
+                This is a table showing some common elements you might use while
+                coding
+              </p>
             </caption>
             <thead>
-              <th scope="col"></th>
-              <th scope="col"></th>
+              <th scope="col">Element</th>
+              <th scope="col">How to use this Element</th>
             </thead>
             <tbody>
-              <tr></tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Link</th>
+                <td>
+                  Specifies relationships between the current document and an
+                  external resource. This element is most commonly used to link
+                  to CSS but is also used to establish site icons (both
+                  "favicon" style icons and icons for the home screen and apps
+                  on mobile devices) among other things.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Style</th>
+                <td>
+                  Contains style information for a document or part of a
+                  document. It contains CSS, which is applied to the contents of
+                  the document containing this element.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">
+                  h1, h2, h3,<br />
+                  h4, h5, h6
+                </th>
+                <td>
+                  Represent six levels of section headings. h1 is the highest
+                  section level and h6 is the lowest.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Aside</th>
+                <td>
+                  Represents a portion of a document whose content is only
+                  indirectly related to the document's main content. Asides are
+                  frequently presented as sidebars or call-out boxes.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Div</th>
+                <td>
+                  Represents a description list. The element encloses a list of
+                  groups of terms (specified using the dt element) and
+                  descriptions (provided by dd elements). Common uses for this
+                  element are to implement a glossary or to display metadata (a
+                  list of key-value pairs).
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Figure</th>
+                <td>
+                  Represents self-contained content, potentially with an
+                  optional caption, which is specified using the figcaption
+                  element. The figure, its caption, and its contents are
+                  referenced as a single unit.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Figcaption</th>
+                <td>
+                  Represents a caption or legend describing the rest of the
+                  contents of its parent figure element.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Unordered List</th>
+                <td>
+                  Represents an unordered list of items, typically rendered as a
+                  bulleted list.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Ordered List</th>
+                <td>
+                  Represents an ordered list of items — typically rendered as a
+                  numbered list.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">List</th>
+                <td>
+                  Represents an item in a list. It must be contained in a parent
+                  element: an ordered list (ol), an unordered list (ul), or a
+                  menu (menu). In menus and unordered lists, list items are
+                  usually displayed using bullet points. In ordered lists, they
+                  are usually displayed with an ascending counter on the left,
+                  such as a number or letter.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">A</th>
+                <td>
+                  Together with its href attribute, creates a hyperlink to web
+                  pages, files, email addresses, locations within the current
+                  page, or anything else a URL can address.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Break</th>
+                <td>
+                  Produces a line break in text (carriage-return). It is useful
+                  for writing a poem or an address, where the division of lines
+                  is significant.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Emphasis</th>
+                <td>
+                  Marks text that has stress emphasis. The em element can be
+                  nested, with each nesting level indicating a greater degree of
+                  emphasis.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Strong</th>
+                <td>
+                  Indicates that its contents have strong importance,
+                  seriousness, or urgency. Browsers typically render the
+                  contents in bold type.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Audio</th>
+                <td>
+                  Used to embed sound content in documents. It may contain one
+                  or more audio sources, represented using the src attribute or
+                  the source element: the browser will choose the most suitable
+                  one. It can also be the destination for streamed media, using
+                  a MediaStream.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Video</th>
+                <td>
+                  Embeds a media player which supports video playback into the
+                  document. You can also use video for audio content, but the
+                  audio element may provide a more appropriate user experience.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Image</th>
+                <td>Embeds an image into the document.</td>
+              </tr>
+              <tr>
+                <th scope="row">Source</th>
+                <td>
+                  Specifies multiple media resources for the picture, the audio
+                  element, or the video element. It is a void element, meaning
+                  that it has no content and does not have a closing tag. It is
+                  commonly used to offer the same media content in multiple file
+                  formats in order to provide compatibility with a broad range
+                  of browsers given their differing support for image file
+                  formats and media file formats.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Caption</th>
+                <td>Specifies the caption (or title) of a table.</td>
+              </tr>
+              <tr>
+                <th scope="row">Button</th>
+                <td>
+                  An interactive element activated by a user with a mouse,
+                  keyboard, finger, voice command, or other assistive
+                  technology. Once activated, it performs an action, such as
+                  submitting a form or opening a dialog.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Address</th>
+                <td>
+                  Indicates that the enclosed HTML provides contact information
+                  for a person or people or for an organization.
+                </td>
               </tr>
             </tbody>
           </table>
         </article>
       </section>
-      <!-- We are now at the end of the first section -->
-
-      <!-- This is the start of section 2 css -->
-      <section class="css-section">
-        <!--This is article one, of section two css rules -->
-        <article class="css-rules">
+      <section>
+        <!--This is article one, of section one html rules -->
+        <article class="html-table-rules" id="table">
           <!-- This is the text body to explain the rules section and how to use it -->
           <p>
-            <!-- This is the Paragraph about important things to know about the rules section and how to use it. -->
+            <!-- This is the Paragraph about important things to know about the table rules section and how to use it. -->
           </p>
-          <!-- This is a table showing a quick reference look at the rules and when to apply them and when to use a different rule instead -->
-          <table class="table-one-css-rules">
+          <!-- This is a table showing a quick reference look at the table layout rules and when to apply them and when to use a different rule instead -->
+          <table class="table-html">
             <caption>
-              <!-- Insert The caption for this table here -->
+              <p>This is the different table options most used in HTML</p>
             </caption>
             <!-- This is what the table heading looks like this is the colomn headers that go across the top of the table to let you know what reach one is for. -->
             <thead>
-              <th scope="col"></th>
-              <th scope="col"></th>
+              <th scope="col">Table Element</th>
+              <th scope="col">Description</th>
             </thead>
             <!-- This is where the table body starts so where you are going to put all the data at -->
             <tbody>
               <!-- Here is our data for this article -->
-              <tr></tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Table</th>
+                <td>
+                  Represents tabular data—that is, information presented in a
+                  two-dimensional table comprised of rows and columns of cells
+                  containing data.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Table Heading (thead)</th>
+                <td>
+                  <p>
+                    Encapsulates a set of table rows (tr elements), indicating
+                    that they comprise the head of a table with information
+                    about the table's columns. This is usually in the form of
+                    column headers (th elements).
+                  </p>
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Table Body (tbody)</th>
+                <td>
+                  Encapsulates a set of table rows (tr elements), indicating
+                  that they comprise the body of a table's (main) data.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Table Row(tr)</th>
+                <td>
+                  Defines a row of cells in a table. The row's cells can then be
+                  established using a mix of td (data cell) and th (header cell)
+                  elements.
+                </td>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td></td>
+                <th scope="row">Table Header (th)</th>
+                <td>
+                  A child of the tr element, it defines a cell as the header of
+                  a group of table cells. The nature of this group can be
+                  explicitly defined by the scope and headers attributes.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Table Data (td)</th>
+                <td>
+                  A child of the tr element, it defines a cell of a table that
+                  contains data.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Table Footer (tfoot)</th>
+                <td>
+                  Encapsulates a set of table rows (tr elements), indicating
+                  that they comprise the foot of a table with information about
+                  the table's columns. This is usually a summary of the columns,
+                  e.g., a sum of the given numbers in a column.
+                </td>
               </tr>
             </tbody>
           </table>
         </article>
         <!-- Always make sure that you are closing all of your starting pathways so that you don't have any errors in the code. -->
-
-        <!-- This is article two of section two css layouts -->
-        <article class="css-layouts-article">
-          <!-- This is the text body that explains the important things to know about the layout section and how to use it -->
-          <p>
-            <!-- This is the Paragraph about important things to know about the layout section and how to use it. -->
-          </p>
-
-          <!-- This is the table that shows the best order in laying out a basic html coding block. This may become and image instead... Leave to be decided later -->
-          <table class="table-two-css-layout">
-            <caption>
-              <!-- Insert The caption for this table here -->
-            </caption>
-            <thead>
-              <th scope="col"></th>
-              <th scope="col"></th>
-            </thead>
-            <tbody>
-              <tr></tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
-
-        <!--This is the last article of the second section css commands -->
-        <article class="css-commands-section">
-          <!-- This is the text block that describes what the important things to know about the command section and how to use it. -->
-          <p>
-            <!-- This is the Paragraph about important things to know about the commands section and how to use it. -->
-          </p>
-          <!-- This is a table that has an easy reference guide to all the commands you might use regularly in css coding -->
-          <table class="table-three-css-commands">
-            <caption>
-              <!-- Insert The caption for this table here -->
-            </caption>
-            <thead>
-              <th scope="col"></th>
-              <th scope="col"></th>
-            </thead>
-            <tbody>
-              <tr></tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
       </section>
     </main>
-
-    <footer></footer>
+    <!-- This is the footer section this is where things that wouldn't go in the nav section might go here like contact information This is also were we are going to put a link to the information that we used. -->
+    <footer>
+      <p>This CheatSheet was made by Mercedes McDonald</p>
+    </footer>
   </body>
 </html>
